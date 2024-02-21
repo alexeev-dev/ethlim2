@@ -1,0 +1,28 @@
+@import 'styles/variables.scss';
+
+.normal {
+  width: 290px; margin-right: 95px; position: sticky; top: 30px; flex-shrink: 0;
+  background: #fff; border-radius: 5px; box-shadow: 0px 2px 4.85px 0.15px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar {
+  &Title {
+    color: #3a3952; font-size: 18px; font-family: $r; font-weight: 500; line-height: 22px;
+    padding: 18px 20px;
+    border-bottom: solid 1px #ebebed;
+  }
+}
+
+.filters {
+  padding: 0 12px;
+
+  &Item {
+    padding: 25px 8px;
+    border-bottom: solid 1px #ebebed;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

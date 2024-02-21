@@ -1,0 +1,16 @@
+@import 'styles/variables.scss';
+
+.normal {
+  position: sticky; left: 0; top: 0; z-index: 16; min-width: 530px;
+  background: #fff; border-bottom: solid 1px #ebebed;
+}
+
+.cell {
+  display: flex; align-items: center; height: 100%; padding: 3px 0; position: relative; top: -2px;
+}
+
+.text {
+  color: #3a3952; font-size: 14px; font-family: $r; font-weight: 400; white-space: nowrap;
+  margin-left: 10px;
+  opacity: 0.5;
+}

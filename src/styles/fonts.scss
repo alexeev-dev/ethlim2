@@ -1,0 +1,10 @@
+@import 'styles/mixins.scss';
+
+// Roboto
+@include font-face('roboto', roboto-light, normal, 300);
+@include font-face('roboto', roboto-regular, normal, 400);
+@include font-face('roboto', roboto-medium, normal, 500);
+@include font-face('roboto', roboto-bold, normal, 700);
+
+// Icon font
+@include font-face('iconfont', iconfont, normal, 400);

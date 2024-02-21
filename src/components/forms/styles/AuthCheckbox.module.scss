@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+
+.normal {
+  color: #3a3952; font-family: $r; font-size: 16px; font-weight: 400;
+  display: inline-flex; margin-bottom: 30px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.check {
+  margin-right: 10px; display: block; width: 14px; height: 14px; position: relative;
+  border: solid 2px #000000;
+
+  &:after {
+    content: '';
+    display: block; width: 8px; height: 8px; position: absolute; right: -10px; top: -10px; z-index: 2;
+    background: #fff;
+    transition: 0.2s ease;
+  }
+}
+
+.active {
+  composes: check;
+
+  &:after {
+    right: -6px; top: -2px;
+  }
+}
+
+.icon {
+  font-size: 12px;
+
+  &Wrap {
+    position: absolute; left: 1px; top: -3px; z-index: 5; width: 0px;
+    overflow: hidden;
+    transition: 0.2s ease;
+
+    .active & {
+      width: 12px;
+    }
+  }
+}

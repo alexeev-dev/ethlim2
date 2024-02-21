@@ -1,0 +1,11 @@
+.wrap {
+  position: fixed; left: 0; top: 0; width: 100%; height: 100vh; z-index: 50;
+  pointer-events: none;
+}
+
+:global(.popupWrap-overlay) {
+  display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;
+  pointer-events: none;
+  background: transparent;
+  transition: background 0.2s ease;
+}

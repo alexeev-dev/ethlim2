@@ -1,0 +1,43 @@
+@import 'styles/variables.scss';
+
+.normal {
+  &, & td:first-child {
+    background: #fff;
+  }
+
+  &:nth-child(even) {
+    &, & td:first-child {
+      background: #f8f8f8;
+    }
+  }
+  &:nth-child(2):hover td {
+    z-index: 10;
+  }
+  &:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+.up, .down {
+  composes: normal;
+}
+
+.up {
+  &, & td:first-child {
+    background: #daf6da !important;
+  }
+}
+
+.down {
+  &, & td:first-child {
+    background: #ffebe6 !important;
+  }
+}
+
+.selected {
+  &, & td:first-child {
+    background: #fffec3 !important;
+  }
+}

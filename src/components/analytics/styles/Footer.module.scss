@@ -1,0 +1,30 @@
+@import 'styles/variables';
+
+.normal {
+  padding-top: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between;
+}
+
+.hidden {
+  display: flex; align-items: center;
+}
+
+.text {
+  color: #3a3952; font-size: 14px; font-family: $r; font-weight: 400; white-space: nowrap;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+.fullscreen {
+  display: flex;
+  background: none;
+  cursor: pointer; opacity: 0.7;
+  transition: 0.15s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &Icon {
+    color: $brand_dark; font-size: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+@import 'styles/variables.scss';
+
+.normal {
+  color: #3a3952; font-size: 15px; font-family: $r; line-height: 16px; font-weight: 400; white-space: nowrap;
+  position: relative; padding: 5px 10px;
+  border-left: solid 1px #ebebed; border-bottom: solid 1px #ebebed;
+
+  &:nth-child(2) {
+    border-left: none;
+  }
+}
+
+.dimension {
+  color: #cccccc; font-size: 10px; font-family: $r;
+}
+
+.delta {
+  color: #3a3952; font-size: 15px; font-family: $r; line-height: 16px; font-weight: 400; white-space: nowrap;
+  margin-left: 5px;
+}
+
+.up {
+  composes: delta;
+  color: #07bf6f;
+}
+
+.down {
+  composes: delta;
+  color: #ec4e20;
+}

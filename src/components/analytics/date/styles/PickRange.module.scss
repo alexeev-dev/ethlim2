@@ -1,0 +1,24 @@
+@import 'styles/variables.scss';
+
+.normal {
+  color: #3a3952; font-size: 15px; font-family: $r; font-weight: 500;
+  display: flex; align-items: center; justify-content: center; padding: 0 15px; width: 100%; position: relative;
+  background: #fff;
+  cursor: pointer;
+}
+
+.active {
+  composes: normal;
+  color: #fff;
+
+  &:after {
+    content: '';
+    display: block; width: calc(100% + 2px); height: calc(100% + 2px); position: absolute; left: -1px; top: -1px; z-index: 1;
+    background: #435cc8;
+  }
+}
+
+
+.title {
+  position: relative; z-index: 2;
+}

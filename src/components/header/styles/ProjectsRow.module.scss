@@ -1,0 +1,78 @@
+@import 'styles/variables.scss';
+
+.normal {
+  position: relative; z-index: 3;
+  border-bottom: solid 1px #d8d8d8;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.products {
+  position: absolute; left: 0; top: 100%; z-index: 2;
+  background: transparent;
+}
+
+.projects {
+  &List {
+    display: flex; align-items: center; width: 100%;
+  }
+
+  &Item {
+    flex-shrink: 0; position: relative;
+    border-right: solid 1px #d8d8d8;
+
+    .products & {
+      border-right: none;
+    }
+  }
+
+  &Button {
+    color: #3a3952; font-size: 16px; font-family: $r; font-weight: 500;
+    display: flex; align-items: center; height: 64px; padding: 0 45px; position: relative;
+    background: transparent;
+    cursor: pointer;
+
+    &:before {
+      content: none;
+      display: block; width: 3px; height: 100%; position: absolute; right: 0; top: 0;
+      background: #435cc8;
+
+      .products & {
+        content: '';
+        width: 1px; height: 20px; top: 50%; transform: translateY(-50%);
+        background: #d6d6d6;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block; width: 7px; height: 7px; margin-left: 10px; transform: rotate(45deg); position: relative; top: -2px;
+      border-right: solid 2px #3a3952; border-bottom: solid 2px #3a3952;
+
+      .products & {
+        content: none;
+      }
+    }
+  }
+}
+
+.active {
+  composes: projectsButton;
+  color: #435cc8;
+  background: #fff;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+
+    .products & {
+      height: 100%;
+    }
+  }
+
+  .products & {
+    box-shadow: 0px 2px 4.85px 0.15px rgba(0, 0, 0, 0.1);
+  }
+}

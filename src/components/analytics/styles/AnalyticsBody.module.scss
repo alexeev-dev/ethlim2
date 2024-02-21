@@ -1,0 +1,25 @@
+.normal {
+  display: flex; height: 100%; position: relative;
+}
+
+.center {
+  width: 100%; position: relative; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+.left, .right {
+  flex-shrink: 0; width: 0px; position: relative;
+  transition: width 0.2s ease;
+}
+
+.left {
+  &.open {
+    width: 300px;
+  }
+}
+
+.right {
+  &.open {
+    width: 402px;
+  }
+}

@@ -1,0 +1,72 @@
+@import 'styles/variables.scss';
+
+.column {
+  width: 10px; padding: 0 2px; position: relative; flex-shrink: 0;
+  cursor: default;
+
+  &:after {
+    content: '';
+    display: block; width: 6px; height: 100%; position: absolute; left: 2px; bottom: 0;
+    background: #e3e7f7;
+  }
+
+  &:hover {
+    &:after {
+      background: #357ffa;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &Stats {
+    display: none; align-items: center; position: fixed; left: 6px; top: -9px; padding: 6px 10px; z-index: 5; transform: translate(-100%, -100%) translateZ(0);
+    background: #282839; border-radius: 5px;
+
+    .column:hover & {
+      display: flex;
+    }
+
+    &:after {
+      content: '';
+      display: block; position: absolute; right: 4px; bottom: 0; transform: translateY(100%);
+      border-left: solid 5px transparent; border-right: solid 5px transparent; border-top: solid 7px #282839;
+    }
+
+    &Item {
+      color: #fff; font-size: 12px; font-family: $r; line-height: 12px;
+      margin-right: 5px; padding-right: 5px;
+      border-right: solid 1px rgba(255,255,255,0.3);
+
+      &:last-child {
+        margin-right: 0; padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+
+  &Time {
+    color: #357ffa; font-size: 11px; font-family: $r;
+    display: none; position: absolute; left: 50%; bottom: -5px; transform: translate(-50%, 100%);
+
+    .column:hover & {
+      display: block;
+    }
+
+    .column:nth-last-child(n + 57):first-child ~ .column:nth-last-child(2) & {left: -30px; transform: translate(0, 100%);}
+    .column:nth-last-child(n + 57):first-child ~ .column:nth-last-child(1) & {left: -40px; transform: translate(0, 100%);}
+
+    .column:nth-child(1) & {left: -20px; transform: translate(0, 100%);}
+  }
+
+  &Date {
+    color: #3a3952; font-size: 14px; font-family: $r; line-height: 18px;
+    position: absolute; left: 50%; bottom: -25px; transform: translate(-50%, 100%);
+    pointer-events: none;
+    &::selection {
+      color: inherit;
+      background: none;
+    }
+  }
+}

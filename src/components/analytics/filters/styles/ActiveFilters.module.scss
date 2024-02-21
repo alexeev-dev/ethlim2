@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; margin: -7px 0;
+}
+
+.filter {
+  color: #fff;
+  margin: 7px; height: 42px; min-width: 160px; padding: 0 20px 0 25px; display: flex; align-items: center; justify-content: space-between;
+  background: #414159; border: solid 2px #414159; border-radius: 50px;
+  cursor: pointer;
+
+  &:hover {
+    color: #414159;
+    background: #fff;
+  }
+
+  &Title {
+    font-size: 14px; font-family: $r; font-weight: 400;
+    pointer-events: none;
+  }
+
+  &Icon {
+    margin-left: 15px;
+    pointer-events: none;
+  }
+}

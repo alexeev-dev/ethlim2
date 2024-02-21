@@ -1,0 +1,57 @@
+@import 'styles/variables.scss';
+
+.stat {
+  display: flex; align-items: center; justify-content: flex-end; margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  color: #3a3952; font-size: 15px; font-family: $r; text-transform: uppercase; font-weight: 500;
+  margin-right: 15px; flex-shrink: 0;
+}
+
+.label {
+  color: #727272; font-size: 14px; font-family: $r;
+  margin-right: 5px;
+
+  &Wrap {
+    margin-left: 10px; flex-shrink: 0; width: 195px; position: relative;
+  }
+}
+
+.counter {
+  composes: labelWrap;
+  margin-left: 35px;
+}
+
+.strong {
+  color: #3a3952; font-size: 20px; font-family: $r; font-weight: 500;
+}
+
+.green {
+  &.strong {
+    color: #07bf6f;
+    margin-left: 5px;
+  }
+}
+
+.red {
+  &.strong {
+    color: #ec4e20;
+    margin-left: 5px;
+  }
+}
+
+.selected {
+  color: #3c3a52; font-size: 10px; line-height: 14px; font-family: $r;
+  position: absolute; min-width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; padding: 0 3px; left: -4px; top: 6px; transform: translateX(-100%);
+  background: #f6f317; border-radius: 20px;
+
+  &Strong {
+    composes: selected;
+    top: 4px;
+  }
+}

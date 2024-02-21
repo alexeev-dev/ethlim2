@@ -1,0 +1,72 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.onPage {
+  display: flex; align-items: center;
+}
+
+.toPage {
+  display: flex; align-items: center;
+}
+
+.list {
+  display: flex; align-items: center; margin-right: 28px;
+}
+
+.li {
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.button {
+  color: #3a3952; font-size: 14px; font-family: $r; line-height: 20px;
+  width: 32px; padding: 5px 0; display: flex; align-items: center; justify-content: center;
+  background: #fff; border: solid 1px #dadada;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #435cc8;
+  }
+}
+
+.active {
+  composes: button;
+  color: #fff;
+  background: #435cc8; border-color: #435cc8;
+}
+
+.setPage {
+  display: flex; align-items: center;
+}
+
+.span {
+  color: #3a3952; font-size: 14px; font-family: $r; line-height: 14px;
+  margin-right: 10px; display: inline-block;
+}
+
+.select {
+  height: 35px; padding: 0 35px 0 15px;
+  border: solid 1px #dadada; border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+
+  &Wrap {
+    position: relative;
+  }
+
+  &Arrow {
+    color: #3a3952; font-size: 20px;
+    position: absolute; right: 10px; top: 7px;
+    pointer-events: none;
+  }
+}
+
+.pagIcon {
+  font-size: 18px; line-height: inherit;
+}

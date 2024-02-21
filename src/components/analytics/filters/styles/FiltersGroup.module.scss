@@ -1,0 +1,35 @@
+@import 'styles/variables.scss';
+
+.normal {
+  position: relative;
+}
+
+.opened {
+  composes: normal;
+  background: #3a3a50;
+}
+
+.button {
+  color: #ffffff; font-size: 14px; font-family: $r; font-weight: 400;
+  padding: 23px 40px 23px 30px; display: flex; align-items: center; width: 100%; position: relative;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #393952;
+  }
+
+  .opened & {
+    opacity: 0.3;
+  }
+
+  &Icon {
+    color: #fff; font-size: 27px;
+    margin-right: 13px;
+  }
+
+  &Chevron {
+    font-size: 20px;
+    position: absolute; right: 18px; top: 26px;
+  }
+}

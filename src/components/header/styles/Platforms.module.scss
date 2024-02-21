@@ -1,0 +1,50 @@
+@import 'styles/variables.scss';
+
+.normal {
+  background: $brand_dark;
+}
+
+.platforms {
+
+  &List {
+
+  }
+
+  &Item {
+    position: relative;
+    background: none;
+  }
+
+  &Button {
+    color: #fff; font-size: 14px; font-family: $r; font-weight: 400; text-align: left; line-height: 20px;
+    padding: 17px 20px 17px 60px; width: 300px; position: relative; display: flex; align-items: center;
+    background: none;
+    cursor: pointer;
+
+    &:after {
+      content: none;
+      display: block; width: 4px; height: 100%; position: absolute; right: 0; top: 0;
+      background: $main_color;
+    }
+  }
+}
+
+.loading {
+  width: 20px; margin-left: 5px;
+}
+
+.selected {
+  composes: platformsButton;
+
+  &:after { content: ''; }
+}
+
+.projects {
+  display: none; position: absolute; right: 0; top: 0; transform: translateX(100%);
+  background: $brand_dark;
+}
+
+.opened {
+  composes: projects;
+  display: block;
+}

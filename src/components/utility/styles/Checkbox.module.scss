@@ -1,0 +1,60 @@
+.normal {
+  width: 40px; height: 20px; position: relative;
+  background: #c7cbd3; border-radius: 50px;
+  transition: background 0.2s ease-out;
+  cursor: pointer;
+
+  &.active {
+    background: #5376f7;
+  }
+}
+
+.status {
+  composes: normal;
+  background: #ec4e20;
+
+  &.active {
+    background: #07bf6f;
+  }
+}
+
+.small {
+  width: 30px; height: 16px; margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.circle {
+  width: 16px; height: 16px; position: absolute; left: 2px; top: 2px; display: flex; align-items: center; justify-content: center;
+  background: #fff; border-radius: 50%;
+  transition: left 0.2s ease-out;
+
+  .active & {
+    left: 22px;
+  }
+  .active.small & {
+    left: 16px;
+  }
+
+  .small & {
+    width: 12px; height: 12px;
+  }
+}
+.updating {
+  width: 8px;
+}
+
+.statusIcon {
+  font-size: 8px;
+
+  &Done {
+    composes: statusIcon;
+    color: #07bf6f;
+  }
+  &Error {
+    composes: statusIcon;
+    color: #ec4e20;
+  }
+}

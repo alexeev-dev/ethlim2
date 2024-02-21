@@ -1,0 +1,174 @@
+@import 'styles/variables.scss';
+
+.row {
+  vertical-align: middle;
+}
+
+.column {
+  padding: 4px 20px 4px 10px; vertical-align: middle;
+  &First {
+    vertical-align: middle; height: 100%; padding: 4px 15px 4px 10px;
+    background: #fafafa; border-right: solid 1px #ebebed;
+  }
+}
+
+
+.cell {
+  display: flex; align-items: center;
+}
+
+.value {
+  color: #3a3952; font-size: 15px; font-family: $r; text-align: right; line-height: 18px;
+  margin-right: 10px; width: 50px; display: inline-block;
+}
+
+.checkbox {
+  display: block; width: 38px; height: 18px; display: inline-block; position: relative; margin-right: 10px;
+  background: #ec4e20; border-radius: 50px;
+  cursor: pointer;
+
+  &Circle {
+    display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; position: absolute; top: 1px; left: 1px;
+    background: #fff; border-radius: 100px;
+    transition: left 0.2s ease;
+
+    .active & {
+      left: 21px;
+    }
+  }
+}
+
+.active {
+  composes: checkbox;
+  background: #07bf6f;
+}
+
+.disabled {
+  composes: checkbox;
+  background: #808080;
+  pointer-events: none;
+}
+
+.input {
+  display: none;
+}
+
+.name {
+  color: #3a3952; font-size: 16px; font-family: $r; line-height: 20px;
+  display: inline-block; min-width: 45px; margin-right: 20px;
+}
+
+.algorithms {
+  display: flex; align-items: center; height: 28px; padding: 5px 10px; position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1;
+    background: #cacdce;
+  }
+  &:after {
+    content: '';
+    display: block; width: calc(100% - 2px); height: calc(100% - 2px); position: absolute; left: 1px; top: 1px; z-index: 2;
+    background: #fff; border-radius: 50px;
+  }
+
+  &Item {
+    color: #b9b8c1; font-size: 14px; font-family: $r;
+    margin-right: 12px; position: relative; z-index: 3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &Quality {
+    width: calc(100% - 14px); left: 7px; height: 2px; position: absolute; z-index: 4;
+    background: linear-gradient(to right, rgba(248,100,78,1) 0%, rgba(250,230,82,1) 50%, rgba(7,191,111,1) 100%);
+
+    &Top {
+      composes: algorithmsQuality;
+      top: 0;
+    }
+    &Bottom {
+      composes: algorithmsQuality;
+      bottom: 0;
+    }
+
+    &Line {
+      height: 100%; position: absolute; top: 0; right: 0;
+      background: #ced1d4;
+    }
+  }
+}
+
+.list {
+  display: flex; align-items: center;
+}
+
+.item {
+  color: #3a3952; font-size: 14px; font-family: $r; line-height: 18px;
+  margin-right: 8px; padding: 4px 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &Default {
+    composes: item;
+    background: #fff; border: solid 1px #dadada;
+  }
+  &Green {
+    composes: item;
+    color: #fff;
+    background: #07bf6f; border-color: #07bf6f;
+  }
+  &Red {
+    composes: item;
+    color: #fff;
+    background: #ec4e20; border-color: #ec4e20;
+  }
+}
+
+.statusIcon {
+  font-size: 10px;
+
+  &Done {
+    composes: statusIcon;
+    color: #07bf6f;
+  }
+  &Error {
+    composes: statusIcon;
+    color: #ec4e20;
+  }
+}
+
+.algValue {
+  display: inline-block; min-width: 35px;
+  &:first-of-type {
+    text-align: right;
+  }
+}
+
+.clicks {
+  display: inline-block; min-width: 20px;
+}
+
+.rangValue {
+  display: inline-block; min-width: 10px;
+
+  &:first-of-type {
+    text-align: right;
+  }
+}
+
+.dark {
+  color: #3a3952;
+}
+.green {
+  color: #3cb054;
+}
+.red {
+  color: #ec4e20;
+}

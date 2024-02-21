@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: flex; align-items: stretch; height: 100%;
+  background: #fff;
+}
+
+.left {
+  width: 100%;
+  background: #f3f3f3;
+}
+
+.right {
+  width: 645px; display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  background: rgba(255,255,255,0.85);
+}
+
+.auth {
+  &Footer {
+    width: 100%; display: flex; align-items: center; justify-content: space-between; height: 50px; padding: 0 30px;
+    background: #f6f6f6;
+
+    &Link {
+      color: #3a3952; font-family: $r; font-size: 16px; font-weight: 400;
+      opacity: 0.9;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.links {
+  display: flex;
+
+  &Item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.copyright {
+  color: #3a3952; font-family: $r; font-size: 16px; font-weight: 400;
+  opacity: 0.9;
+}

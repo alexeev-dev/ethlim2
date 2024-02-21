@@ -1,0 +1,45 @@
+@import 'styles/variables';
+
+.normal {
+  padding: 12px 20px; margin-top: 5px; display: flex; align-items: center; justify-content: space-between; align-self: center; width: 760px;
+  background: #fcebea; border: solid 1px #e75144; border-radius: 5px;
+}
+
+.icon {
+
+}
+
+.error {
+  display: flex; align-items: center;
+
+  &Icon {
+    color: #e75144; font-size: 28px;
+    margin-right: 10px;
+  }
+}
+
+.text {
+  color: #e75144; font-size: 16px; font-family: $r; font-weight: 400; line-height: 20px;
+}
+
+.strong {
+  font-weight: 700; text-transform: uppercase;
+}
+
+.button {
+  display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+  background: #e75144; border: solid 2px #e75144; border-radius: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+
+    .buttonIcon {
+      color: #e75144;
+    }
+  }
+
+  &Icon {
+    color: #fff; font-size: 16px;
+  }
+}

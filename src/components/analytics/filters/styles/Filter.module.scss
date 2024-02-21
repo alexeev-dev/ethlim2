@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+
+.normal {
+  padding: 5px 30px 15px;
+}
+
+.input {
+  color: #fff; font-size: 14px; font-family: $r; font-weight: 300;
+  width: 100%; padding-bottom: 2px; margin-bottom: 20px;
+  background: none; border-bottom: solid 1px rgba(255,255,255,0.2);
+
+  &::-webkit-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-o-placeholder {
+    color: #6e6e80;
+  }
+}
+
+.values {
+  max-height: 130px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: #414159;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: #6c6cb9;
+  }
+
+  &Item {
+    color: #fff; font-size: 14px; font-family: $r; font-weight: 400;
+    padding: 5px 0;
+    cursor: pointer;
+
+    &:hover {text-decoration: underline;}
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Fetching {
+    composes: valuesItem;
+    pointer-events: none;
+  }
+}

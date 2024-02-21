@@ -1,0 +1,60 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: inline-flex; align-items: center; margin-left: 15px; position: absolute; right: 40px; top: 50%; transform: translateY(-50%);
+  opacity: 0;
+
+  tr:hover & {
+    opacity: 1;
+  }
+}
+
+.button {
+  margin-right: 5px; position: relative; display: flex; align-items: center; justify-content: center; width: 30px; height: 30px;
+  background: $main_color; border: solid 2px $main_color; border-radius: 50%;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: #fff;
+    .tooltip {
+      opacity: 1;
+      transition: 0.2s 0.5s ease;
+    }
+
+    .icon {
+      color: $main_color;
+    }
+  }
+}
+
+.icon {
+  color: #fff; font-size: 18px;
+  pointer-events: none;
+}
+
+.tooltip {
+  font-size: 14px; font-family: $r; font-weight: 400; line-height: 18px;
+  position: absolute; left: 50%; top: -10px; transform: translate(-50%, -100%); z-index: 10; padding: 2px 3px;
+  background: #fff; border-radius: 4px; box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  pointer-events: none; opacity: 0;
+  transition: 0.2s ease;
+
+  table tr:nth-child(2) & {
+    top: auto; bottom: -10px; transform: translate(-50%, 100%);
+
+    &:after {
+      bottom: auto; top: 0; transform: translate(-50%, -100%);
+      border-top: none; border-bottom: solid 5px #fff;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+    border-top: solid 5px #fff; border-left: solid 6px transparent; border-right: solid 6px transparent;
+  }
+}

@@ -1,0 +1,67 @@
+@import 'styles/variables.scss';
+
+.wrap {
+  position: fixed; left: 0; top: 0; width: 100%; height: 100vh; z-index: 5;
+  pointer-events: none;
+
+  &:hover ~ :global(.popupWrap-overlay) {
+    background: rgba(255,255,255,0.9);
+  }
+
+  &Active {
+    composes: wrap;
+    z-index: 6;
+    pointer-events: auto;
+  }
+}
+
+.overlay {
+  composes: overlay from './Wrap.module.scss';
+}
+
+.popup {
+  white-space: nowrap;
+  position: absolute; left: 50%; top: 50%; z-index: 100;
+  background: #fff; border-radius: 4px; box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+  pointer-events: none; opacity: 0;
+}
+
+.active {
+  composes: popup;
+  opacity: 1; pointer-events: auto;
+}
+
+.header {
+  height: 42px; position: relative; display: flex; align-items: center; padding: 0 20px;
+  background: #435cc8;
+
+  &:hover {
+    cursor: grab;
+  }
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.close {
+  position: absolute; left: 0; top: 0; width: 42px; height: 42px; transform: translateX(-100%);
+  background: #357ffa; border-radius: 4px 0 0 4px;
+  cursor: pointer;
+
+  &:before, &:after {
+    content: '';
+    display: block; width: 20px; height: 2px; position: absolute; left: 50%; top: 50%;
+    background: #fff; border-radius: 10px;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.title {
+  color: #fff; font-size: 13px; font-family: $r; line-height: 16px;
+  pointer-events: none;
+}

@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.normal {
+  height: 100%; padding: 25px 50px; display: flex; flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tableHeader {position: relative;}

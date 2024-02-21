@@ -1,0 +1,21 @@
+@import 'styles/variables';
+
+.normal {
+
+}
+
+.title {
+  color: #3a3952; font-size: 16px; font-family: $r; line-height: 20px; font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.list {
+  &Item {
+    color: #3a3952; font-size: 15px; font-family: $r; line-height: 20px; font-weight: 400;
+    opacity: 0.85;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

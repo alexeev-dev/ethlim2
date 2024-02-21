@@ -1,0 +1,106 @@
+@import 'styles/variables.scss';
+
+.normal {
+  flex-shrink: 0; margin: 0 25px; height: 100%; position: relative;
+
+}
+
+.source {
+  font-size: 14px; font-family: $r; font-weight: 400;
+  display: flex; align-items: center; justify-content: center; height: 100%; position: relative;
+  background: none;
+
+  cursor: pointer;
+
+  &:hover {
+    // .icon {color: $main_color;}
+  }
+
+  &Wrap {
+    display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px;
+    // background: none; border-right: solid 1px #d6d6d6;
+    border-radius: 100%; background: $main_color;
+  }
+
+  &Active {
+    composes: source;
+    .sourceWrap {
+      min-width: 80px; height: 100%; border-radius: 0;
+      background: $brand_dark; border-color:$main_color;
+    }
+
+    &, .icon, &:hover .icon {color: #FFF;}
+
+    &:hover {
+      // color: #3c3a52;
+      .sourceWrap {
+        background: $brand_light;
+      }
+
+      // .icon {color: #3c3a52;}
+
+      .currentProject {
+        background: $main_color;
+      }
+    }
+  }
+
+  &Text {
+    white-space: nowrap;
+    padding: 0 25px; display: flex; align-items: center;
+  }
+
+  &Icon {
+    width: 16px; height: 16px; margin-right: 5px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
+  }
+}
+
+.loading {
+  width: 26px;
+
+  &Small {
+    width: 20px; position: absolute; left: 5px; top: 50%; transform: translateY(-50%);
+  }
+}
+
+.icon {
+  font-size: 32px;
+  pointer-events: none;
+
+  color: #fff;
+}
+
+.projects {
+  color: #fff;
+  display: none; position: absolute; left: 0; bottom: 0; transform: translate(0, 100%);
+  background: $brand_dark;
+
+  &Open {
+    composes: projects;
+    display: block;
+  }
+}
+
+.currentProject {
+  color: #fff; font-size: 14px; font-family: $r; font-weight: 400;
+  display: flex; align-items: center; height: 80px; padding: 0 20px 0 19px;
+  background: $main_color; border-right: solid 1px $main_color;
+}
+
+.start {
+  color: #fff; font-size: 14px; font-weight: 400; font-family: $r; white-space: nowrap;
+  display: flex; align-items: center; height: 36px; padding: 0 20px; position: absolute; right: -35px; top: 50%; transform: translate(100%, -50%);
+  background: $main_color; border-radius: 100px;
+  pointer-events: none; opacity: 0; transition: 0.2s ease;
+
+  &.active {
+    opacity: 1; right: -25px;
+  }
+
+  &:before {
+    content: '';
+    display: block;position: absolute; left: 2px; top: 50%; transform: translate(-100%, -50%);
+    border-top: solid 6px transparent; border-bottom: solid 6px transparent; border-left: solid 10px transparent; border-right: solid 10px $main_color;
+  }
+}

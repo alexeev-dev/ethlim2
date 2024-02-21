@@ -1,0 +1,40 @@
+@import 'styles/variables.scss';
+
+.normal {
+  // position: relative;
+  position: absolute; width: 100%;
+}
+
+.header {
+  display: flex; align-items: stretch; justify-content: space-between; height: 80px; position: relative; z-index: 20;
+  // background: #fff; box-shadow: 0 -3px 3px 5px rgba(0,0,0,0.1);
+}
+
+.left, .right {
+  display: flex; align-items: center;
+}
+
+.left {
+
+}
+
+.right {
+
+}
+
+.title {
+  color: #393952; font-size: 22px; font-family: $r; font-weight: 700;
+  width: 100%; padding: 0 30px; display: flex; align-items: flex-end; justify-content: center; position: relative; top: -6px;
+
+  &Span {
+    position: relative; top: 4px;
+  }
+}
+
+.logo {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

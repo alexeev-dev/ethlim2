@@ -1,0 +1,205 @@
+@import 'styles/variables.scss';
+
+.bid {
+
+}
+
+.header {
+  padding: 10px 20px 5px;
+}
+
+.empty {
+  &Text {
+    color: $brand_dark; font-size: 16px; font-family: $r; line-height: 22px; font-weight: 400;
+    padding: 5px 15px;
+  }
+}
+
+.chart {
+  display: flex; align-items: flex-end; padding-bottom: 50px; height: 130px; padding: 0 20px 50px; max-width: 700px; margin: 0 auto;
+  overflow-x: auto;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+
+    & > div {
+      pointer-events: none;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+    background: #ebebed;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 10px;
+    border-radius: 10px; background: #c9c9c9;
+  }
+  &::-webkit-scrollbar-button:single-button {
+    background-color: #ebebed;
+    display: block;
+    border-style: solid;
+    height: 8px;
+    width: 12px;
+  }
+  &::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #46455c transparent transparent;
+  }
+  &::-webkit-scrollbar-button:single-button:horizontal:increment {
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #46455c;
+  }
+}
+
+.data {
+  display: flex; padding: 20px; justify-content: space-between;
+  background: #fafafa; border-top: solid 1px #ebebed;
+}
+
+.stats {
+  display: flex; align-items: flex-start; margin-right: 115px; padding-left: 15px;
+}
+
+.item {
+  margin-right: 30px; padding-bottom: 23px; position: relative; display: flex; flex-direction: column; align-items: flex-end;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &Header {
+    color: #3a3952; font-size: 24px; font-family: $r; line-height: 28px; text-transform: uppercase;
+    margin-bottom: 10px; position: relative;
+
+    &Text {
+      opacity: 0.42;
+    }
+  }
+  &Current {
+    color: #3a3952; font-size: 20px; font-family: $r; line-height: 24px; font-weight: 500;
+    margin-bottom: 2px;
+  }
+  &Diff {
+    color: #3a3952; font-size: 15px; font-family: $r; line-height: 18px;
+  }
+  &Label {
+    color: #727272; font-size: 14px; font-family: $r; line-height: 18px; white-space: nowrap;
+    position: absolute; left: 0; bottom: 0;
+  }
+}
+
+.rate {
+  padding-top: 5px;
+
+  &Change {
+    height: 42px; position: relative; display: flex; align-items: center; padding-left: 20px;
+    background: #fff; border: solid 1px #357ffa; border-radius: 4px;
+
+    &Multi {
+      composes: rateChange;
+      padding-left: 0;
+    }
+  }
+  &Clicks {
+    color: #435cc8; font-size: 15px; font-family: $r; line-height: 18px;
+    display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; position: absolute; left: -20px; top: 50%; transform: translate(-100%, -50%);
+    background: #fff; border: solid 1px #357ffa; border-radius: 100px;
+
+    &:before {
+      content: '';
+      display: block; width: 36px; height: 36px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      border: solid 1px #3a3952; border-radius: 100px;
+      opacity: 0.2; pointer-events: none;
+    }
+    &:after {
+      content: '';
+      display: block; width: 21px; height: 6px; position: absolute; right: 0; top: 50%; transform: translate(100%, -50%);
+      background: #fff; border-top: solid 1px #357ffa; border-bottom: solid 1px #357ffa;
+    }
+  }
+  &Current {
+    color: #435cc8; font-size: 15px; font-family: $r; line-height: 18px;
+    margin-right: 20px;
+  }
+  &Offer {
+    color: $brand_dark; font-size: 15px; font-family: $r; line-height: 18px;
+    margin-right: 20px;
+
+    &Roi {
+      color: inherit;
+
+      &.active {
+        color: #07bf6f;
+      }
+    }
+    &Lead {
+      color: inherit;
+
+      &.active {
+        color: #ec4e20;
+      }
+    }
+  }
+  &Small {
+    color: inherit; font-size: 12px; font-family: inherit;
+  }
+  &Input {
+    color: #fff; font-size: 15px; font-family: $r; line-height: 18px; text-align: center;
+    width: 80px; height: 100%;
+    background: #357ffa; border-left: solid 1px #2c67c8; border-right: solid 1px #2c67c8;
+
+    &Multi {
+      composes: rateInput;
+      width: 100%;
+    }
+  }
+}
+
+.comment {
+  margin-bottom: 10px; width: 100%;
+
+  &Input {
+    color: #3a3952; font-size: 14px; font-family: $r;
+    padding-bottom: 2px; width: 100%;
+    background: none; border-bottom: solid 1px #e6e6e9;
+
+    &::-webkit-input-placeholder {opacity: 0.8;}
+    &::-moz-placeholder {opacity: 0.8;}
+    &:-ms-placeholder {opacity: 0.8;}
+    &:-moz-placeholder {opacity: 0.8;}
+  }
+}
+
+.confirm {
+  display: flex; align-items: center; justify-content: center; width: 44px; height: 100%;
+  background: #357ffa;
+  cursor: pointer;
+
+  &Disabled {
+    composes: confirm;
+    pointer-events: none;
+  }
+}
+
+.icon {
+  color: #fff; font-size: 12px;
+}
+
+.updating {
+
+}
+
+.selected {
+  &Count {
+    color: #3c3a52; font-size: 10px; font-family: $r; font-weight: 400;
+    position: absolute; left: -5px; top: 0; transform: translateX(-100%); display: flex; align-items: center; justify-content: center; padding: 0 4px; height: 14px; min-width: 14px;
+    background: #f6f317; border-radius: 40px;
+  }
+}
+
+.preloader {
+  display: block; width: 100%; height: 130px;
+  background: url('/../public/assets/img/table-loading.svg') center center no-repeat; background-size: 30px;
+}

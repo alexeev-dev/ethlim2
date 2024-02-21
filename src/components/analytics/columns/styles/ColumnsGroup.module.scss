@@ -1,0 +1,18 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: flex; align-items: center; margin-bottom: 7px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  color: #3a3952; font-size: 16px; font-family: $r; font-weight: 400;
+  margin-right: 25px; display: flex; align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}

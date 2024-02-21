@@ -1,0 +1,276 @@
+.if {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.beta:before {
+  content: "\e956";
+}
+.fullscreen:before {
+  content: "\e954";
+}
+.fullscreen-exit:before {
+  content: "\e955";
+}
+.warning-3:before {
+  content: "\e952";
+}
+.warning-2:before {
+  content: "\e953";
+}
+.offers:before {
+  content: "\e951";
+}
+.regions:before {
+  content: "\e950";
+}
+.reload:before {
+  content: "\e94f";
+}
+.menu-second:before {
+  content: "\e94e";
+}
+.loupe:before {
+  content: "\e94d";
+}
+.eye:before {
+  content: "\e949";
+}
+.user:before {
+  content: "\e94a";
+}
+.money:before {
+  content: "\e94b";
+}
+.user-click:before {
+  content: "\e94c";
+}
+.check-thin:before {
+  content: "\e948";
+}
+.done:before {
+  content: "\e945";
+}
+.error:before {
+  content: "\e946";
+}
+.play:before {
+  content: "\e947";
+}
+.switcher:before {
+  content: "\e942";
+}
+.bid:before {
+  content: "\e944";
+}
+.funnel:before {
+  content: "\e943";
+}
+.upload-cloud:before {
+  content: "\e93d";
+}
+.download-cloud:before {
+  content: "\e93f";
+}
+.placeholder:before {
+  content: "\e93e";
+}
+.chevron-down:before {
+  content: "\e940";
+}
+.chevron-up:before {
+  content: "\e941";
+}
+.chevron-left:before {
+  content: "\e93b";
+}
+.chevron-right:before {
+  content: "\e93c";
+}
+.calendars:before {
+  content: "\e93a";
+}
+.arrow-shift-left:before {
+  content: "\e938";
+}
+.arrow-shift-right:before {
+  content: "\e939";
+}
+.conversation:before {
+  content: "\e937";
+}
+.excel:before {
+  content: "\e900";
+}
+.pdf:before {
+  content: "\e901";
+}
+.add:before {
+  content: "\e902";
+}
+.arrow-down:before {
+  content: "\e903";
+}
+.arrow-drop-down:before {
+  content: "\e904";
+}
+.arrow-drop-left:before {
+  content: "\e905";
+}
+.arrow-drop-right:before {
+  content: "\e906";
+}
+.arrow-drop-up:before {
+  content: "\e907";
+}
+.arrow-long-right:before {
+  content: "\e908";
+}
+.arrow-up:before {
+  content: "\e909";
+}
+.bell:before {
+  content: "\e90a";
+}
+.chart-up-month:before {
+  content: "\e90b";
+}
+.chart-up-year:before {
+  content: "\e90c";
+}
+.chat:before {
+  content: "\e90d";
+}
+.check:before {
+  content: "\e90e";
+}
+.checkbox:before {
+  content: "\e90f";
+}
+.checkbox-blank:before {
+  content: "\e910";
+}
+.check-circle:before {
+  content: "\e911";
+}
+.checklist:before {
+  content: "\e912";
+}
+.clicker:before {
+  content: "\e913";
+}
+.close:before {
+  content: "\e914";
+}
+.close-big:before {
+  content: "\e915";
+}
+.cog:before {
+  content: "\e916";
+}
+.comments:before {
+  content: "\e917";
+}
+.create:before {
+  content: "\e918";
+}
+.dashboard:before {
+  content: "\e919";
+}
+.delete:before {
+  content: "\e91a";
+}
+.description:before {
+  content: "\e91b";
+}
+.drag:before {
+  content: "\e91c";
+}
+.email:before {
+  content: "\e91d";
+}
+.equalizer:before {
+  content: "\e91e";
+}
+.filter:before {
+  content: "\e91f";
+}
+.funnel-empty:before {
+  content: "\e920";
+}
+.hand-click:before {
+  content: "\e921";
+}
+.info:before {
+  content: "\e922";
+}
+.library:before {
+  content: "\e923";
+}
+.like:before {
+  content: "\e924";
+}
+.map:before {
+  content: "\e925";
+}
+.menu:before {
+  content: "\e926";
+}
+.more-vert:before {
+  content: "\e927";
+}
+.notes:before {
+  content: "\e928";
+}
+.notifications:before {
+  content: "\e929";
+}
+.refresh:before {
+  content: "\e92a";
+}
+.rocket:before {
+  content: "\e92b";
+}
+.search:before {
+  content: "\e92c";
+}
+.security:before {
+  content: "\e92d";
+}
+.share:before {
+  content: "\e92e";
+}
+.star:before {
+  content: "\e92f";
+}
+.star-empty:before {
+  content: "\e930";
+}
+.star-half:before {
+  content: "\e931";
+}
+.trophy:before {
+  content: "\e932";
+}
+.tune:before {
+  content: "\e933";
+}
+.upload:before {
+  content: "\e934";
+}
+.warning:before {
+  content: "\e935";
+}
+.widgets:before {
+  content: "\e936";
+}

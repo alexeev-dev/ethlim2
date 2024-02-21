@@ -1,0 +1,58 @@
+@import 'styles/variables.scss';
+
+.normal {
+  color: #3a3952; font-size: 15px; font-family: $r; line-height: 16px; font-weight: 400; white-space: nowrap;
+  padding: 0 120px 0 10px; position: sticky; left: 0; z-index: 15 !important;
+  border-bottom: solid 1px #ebebed;
+
+  &:before {
+    content: '';
+    display: block; width: 1px; height: 100%; position: absolute; left: 0; top: 0;
+    background: #ebebeb;
+  }
+}
+
+.toggle {
+  display: inline; width: 16px; height: 16px; position: relative; margin-right: 10px;
+  background: #f0f0f7; border-radius: 20px;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    background: #757487;
+  }
+  &:before {
+    width: 2px; height: 8px;
+  }
+  &:after {
+    width: 8px; height: 2px;
+  }
+}
+
+.active {
+  composes: toggle;
+  &:before {
+    content: none;
+  }
+}
+
+.loading {
+  composes: toggle;
+  background: #f0f0f7 url('/../public/assets/img/row-loading.svg') center center no-repeat;
+  &:before, &:after {
+    content: none;
+  }
+}
+
+.emptySpan {
+  display: inline-block; width: 16px; height: 16px; margin-right: 10px;
+}
+
+.select {
+  text-align: left;
+  width: 100%; padding: 6px 0;
+  background: none;
+  cursor: pointer;
+}

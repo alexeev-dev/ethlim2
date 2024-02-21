@@ -1,0 +1,46 @@
+@import 'styles/variables.scss';
+
+.normal {
+  display: flex; width: 100%;
+}
+
+.source {
+  width: 100%; padding: 10px 0; display: flex; flex-direction: column; align-items: stretch;
+
+  &Button {
+    text-align: center;
+    width: 100%; padding: 10px;
+    background: none;
+    cursor: pointer; filter: grayscale(1); opacity: 0.4;
+
+    &.active {
+      filter: none; opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  &Image {
+    pointer-events: none;
+  }
+}
+
+.platform {
+  flex-shrink: 0; display: flex; flex-direction: column; align-items: stretch;
+  background: #eaeaf2;
+
+  &Button {
+    color: #c8c8c8; font-size: 30px; font-family: $r; font-weight: 500; text-align: center;
+    padding: 10px;
+    border-bottom: solid 1px #c7c7ce;
+    cursor: pointer;
+
+    &.active {
+      color: #000;
+      pointer-events: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
