@@ -1,0 +1,57 @@
+{
+  "name": "analytics2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sentry/browser": "^5.9.1",
+    "cuid": "^2.1.6",
+    "moment": "2.18.1",
+    "moment-range": "^4.0.2",
+    "object-path-immutable": "https://github.com/vladimir-shalaev22/object-path-immutable.git",
+    "react": "^16.9.0",
+    "react-beautiful-dnd": "^11.0.5",
+    "react-daterange-picker": "^2.0.1",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-observable": "^1.2.0",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "rxjs": "^6.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start --openssl-legacy-provider start",
+    "build": "react-scripts build && react-snapshot",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "ssh -i analytics-ii.pem vlad@84.201.136.184 \"cd analytics && git pull && yarn build\"",
+    "updep": "ssh -i analytics-ii.pem vlad@84.201.136.184 \"cd analytics && git pull && yarn install\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "file-loader": "^6.2.0",
+    "react-snapshot": "^1.3.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
+    "webpack": "^5.90.3"
+  }
+}

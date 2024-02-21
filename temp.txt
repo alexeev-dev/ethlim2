@@ -1,0 +1,37 @@
+"start": "react-scripts --openssl-legacy-provider start"
+
+chmod 400 ~/.ssh/id_rsa
+
+yarn add docusaurus --dev
+
+npm install --unsafe-perms
+
+yarn add node-gyp@latest
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
+yarn remove node-sass
+
+brew install node@12
+
+yarn add react-scripts@latest
+
+yarn add @babel/plugin-proposal-private-property-in-object
+
+yarn add -D resolve-url-loader
+
+
+python3 -m http.server --cgi 8080
+http://localhost:8000
+
+
+
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react-router-dom": "^5.3.3",
+    "css-loader": "^6.10.0",
+    "postcss-loader": "^8.1.0",
+    "react-snapshot": "^1.3.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.3"
